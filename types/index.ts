@@ -27,3 +27,15 @@ export interface signUpFormtype {
   confirm_password: string;
   terms: boolean;
 }
+
+export interface CardItemPropsType {
+  src: string;
+  title: string;
+  paragraph: string;
+}
+
+export interface FaqListPropType {
+  id: number;
+  title: string;
+  paragraph: string;
+}

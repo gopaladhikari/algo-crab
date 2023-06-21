@@ -2,10 +2,11 @@
 import { useFormik } from "formik";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { signUpFormtype } from "@/types";
 import { signUpValidator } from "@/schemas/signupValidation";
 import axios from "axios";
+import { toast } from "react-toastify";
 const url = "https://jsonplaceholder.typicode.com/posts";
 
 const initialValues: signUpFormtype = {
@@ -24,9 +25,29 @@ function Signup() {
       onSubmit: (values, action) => {
         axios
           .post(url, values)
-          .then(({ data }) => console.log(data))
+          .then(({ data }) => {
+            toast.success("Sign Up success", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
+          })
           .catch((error) => {
-            console.log(error);
+            toast.error(`Sign up failed, ${error}`, {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
           });
         action.resetForm();
       },
@@ -68,7 +89,7 @@ function Signup() {
                   name="name"
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="John Doe"
-                  value={values.email}
+                  value={values.name}
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />{" "}

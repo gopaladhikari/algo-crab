@@ -1,3 +1,6 @@
+import { v4 as getId } from "uuid";
+getId();
+
 export const navLinks = [
   {
     id: 1,
@@ -21,11 +24,6 @@ export const footerLinks = [
     id: 1,
     title: "Company",
     links: [
-      {
-        id: 10,
-        href: "/about",
-        title: "About",
-      },
       {
         id: 11,
         href: "/pricing",
@@ -64,5 +62,71 @@ export const footerLinks = [
         title: "Instagram",
       },
     ],
+  },
+];
+
+export const dignitySections = [
+  {
+    src: "/dignity-1.png",
+    title: "Convenient trading interface",
+    paragraph:
+      "We created the most simple and comfortable interface that does not distract from the main thing - from trading",
+  },
+  {
+    src: "/dignity-2.png",
+    title: "Integrated signals",
+    paragraph:
+      "Approach the strategy thoughtfully - the most precise and innovative signals with an accuracy of 87% will help you create your own effective strategy",
+  },
+  {
+    src: "/dignity-3.png",
+    title: "Convenient trading interface",
+    paragraph:
+      "We have gathered the most useful trading indicators. Use them to boost your account balance",
+  },
+  {
+    src: "/dignity-4.png",
+    title: "Convenient trading interface",
+    paragraph:
+      "Our platform runs on the most modern technology and delivers incredible speed",
+  },
+];
+
+export const FAQList = [
+  {
+    id: 1,
+    title: "How to learn?",
+    paragraph:
+      "Sign up and train on a demo account. It is exactly the same as real trading, but for free.",
+  },
+  {
+    id: 2,
+    title: "How long does it takes to withdraw funds?",
+    paragraph:
+      "On average, the withdrawal procedure takes from one to five days from the date of receipt of the corresponding request of the Client and depends only on the volume of simultaneously processed requests. The company always tries to make payments directly on the day the request is received from the Client. ",
+  },
+  {
+    id: 3,
+    title: "What is a trading platform and why is it needed?",
+    paragraph:
+      "Trading platform - a software complex that allows the Client to conduct trades (operations) using different financial instruments. It has also accesses to various information such as the value of quotations, real-time market positions, actions of the Company, etc. ",
+  },
+  {
+    id: 4,
+    title: "Can I trade with the phone?",
+    paragraph:
+      "Our platform runs on the most modern technology and opens in the browser of any computer or mobile phone.",
+  },
+  {
+    id: 5,
+    title: "What is the minimum deposit amount?",
+    paragraph:
+      "The advantage of the Company’s trading platform is that you don’t have to deposit large amounts to your account. You can start trading by investing a small amount of money. The minimum deposit is 10 US dollars. ",
+  },
+  {
+    id: 6,
+    title: "What is the minimum deposit amount?",
+    paragraph:
+      "No. The company does not charge any fee for either the deposit or for the withdrawal operations. However, it is worth considering that payment systems can charge their fee and use the internal currency conversion rate.",
   },
 ];

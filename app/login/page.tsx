@@ -5,6 +5,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 import { loginFormtype } from "@/types";
 import { loginValidator } from "@/schemas/loginValiation";
+import { toast } from "react-toastify";
 const url = "https://jsonplaceholder.typicode.com/posts";
 
 const initialValues: loginFormtype = {
@@ -22,10 +23,28 @@ function page() {
         axios
           .post(url, values)
           .then(({ data }) => {
-            console.log(data);
+            toast.success("Login success", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
           })
           .catch((error) => {
-            console.log(error);
+            toast.error(`Login failed, ${error}`, {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
           });
         action.resetForm();
       },
