@@ -1,6 +1,3 @@
-import { v4 as getId } from "uuid";
-getId();
-
 export const navLinks = [
   {
     id: 1,
@@ -128,5 +125,58 @@ export const FAQList = [
     title: "What is the minimum deposit amount?",
     paragraph:
       "No. The company does not charge any fee for either the deposit or for the withdrawal operations. However, it is worth considering that payment systems can charge their fee and use the internal currency conversion rate.",
+  },
+];
+
+export const startTradingSection = [
+  {
+    title: "Sign up",
+    src: "/start-trading-1.png",
+    paragraph: "Open an account for free in just a few minutes.",
+  },
+  {
+    title: "Practice",
+    src: "/start-trading-2.png",
+    paragraph:
+      "Get your skills better with a demo account and training materials.",
+  },
+  {
+    title: "Deposit and trade",
+    src: "/start-trading-3.png",
+    paragraph:
+      "Over 410 instruments and a minimum deposit of $5 for optimal trading.",
+  },
+];
+
+export const testominialList = [
+  {
+    userName: "Lankesh Kumar",
+    description:
+      "I lose 5 lacs doing emotional trading. They taught me about the emotionalless way of trading of algo  trading. I am glad to get me as my financial friend.",
+  },
+  {
+    userName: "Minesh Munshi",
+    description:
+      "As I was new in trading, I tried algo trading and Team crab helped me a lot. Now I able to earn money and my losses are very less.",
+  },
+  {
+    userName: "Subhash Singh",
+    description:
+      "I am very happy because I can do my job without any trading tension. Earlier, it wasn an headache to trade manually but now, profits are consistent.",
+  },
+  {
+    userName: "Deemitrus",
+    description:
+      "Great platform, everything works smoothly. Support service is great, they always help in controversial situations. Moreover, the trading platform works at an excellent speed, coupled with online quotes, the ability to set expiration from 1 minute to 4 hours.",
+  },
+  {
+    userName: "Hitesh Luhar",
+    description:
+      "What a Wonderful trading. Excellent app for trading. Always give withdrawal before time. Not manipulate more like any other platform app. I am using this app since starting very good app. Customer support is excellent. Give all answers and solve all the queries within no time. I suggest you to use this app for trading.",
+  },
+  {
+    userName: "ashok kumar",
+    description:
+      "Quotex is really a good platform for trading. The charts are quick in terms of response to market fluctuations and highly customizable. The platform hosts dozens of commonly used indicators that can each be fine-tuned to a trader's personal taste. The deposits and withdrawals are also very fast.",
   },
 ];
