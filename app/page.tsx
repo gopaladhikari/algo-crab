@@ -1,11 +1,14 @@
 import React from "react";
 import Banner from "@/components/Banner";
-import { dignitySections } from "@/constants";
+import {
+  dignitySections,
+  paymentMethods,
+  FAQList,
+  startTradingSection,
+} from "@/constants";
 import CardItem from "@/components/CardItem";
 import { v4 as getKey } from "uuid";
 import FAQ from "@/components/FAQ";
-import { FAQList } from "@/constants";
-import { startTradingSection } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import Testominial from "@/components/Testomonial";
@@ -16,9 +19,25 @@ function Home() {
       {/* Hero section */}
       <Banner />
 
+      <section className="container mx-auto sm:pt-16 mb-8">
+        <div className="flex justify-between items-center px-6">
+          {paymentMethods.map(({ src }) => (
+            <>
+              <Image
+                className="sm:w-[60px] sm:h-[60px] lg:w-[70px] object-contain"
+                src={src}
+                width={50}
+                height={50}
+                alt="payment method"
+              />
+            </>
+          ))}
+        </div>
+      </section>
+
       {/* Card Section */}
-      <section className="py-8 md:py-16 ">
-        <div className="max-w-screen-2xl  mx-auto bg-[#303446] grid sm:grid-cols-2 xl:grid-cols-4 py-8 md:py-12 xl:py-20">
+      <section className="py-8 md:py-16 px-4">
+        <div className="container mx-auto dark:bg-[#303446] gap-4 grid sm:grid-cols-2 xl:grid-cols-4">
           {dignitySections.map((item) => (
             <CardItem key={getKey()} {...item} />
           ))}
@@ -26,8 +45,8 @@ function Home() {
       </section>
 
       {/* Chart Section */}
-      <section className="py-8">
-        <div className="max-w-screen-2xl mx-auto ">
+      <section className="py-8 px-4">
+        <div className="container mx-auto ">
           <h1 className="dark:text-white text-2xl md:text-4xl font-semibold">
             To make more money, <br className="max-md:hidden" /> make the
             correct prognosis
@@ -313,8 +332,8 @@ function Home() {
       </section>
 
       {/* Start Trading Section */}
-      <section className="py-8">
-        <div className="max-w-screen-2xl mx-auto flex max-md:flex-col justify-between">
+      <section className="py-8 md:py-16 px-4">
+        <div className="container mx-auto flex max-md:flex-col gap-4 justify-between">
           {startTradingSection.map((item) => (
             <CardItem key={getKey()} {...item} />
           ))}
@@ -325,7 +344,7 @@ function Home() {
       <Testominial />
 
       {/* FAQ section */}
-      <section className="max-w-screen-2xl mx-auto">
+      <section className="container mx-auto">
         <h1 className="dark:text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-8 p-3">
           Frequently asked questions
         </h1>
@@ -333,7 +352,7 @@ function Home() {
           id="accordion-color"
           data-accordion="collapse"
           data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white"
-          className="flex flex-col gap-4"
+          className="flex flex-col lg:gap-2"
         >
           {FAQList.map((item) => (
             <FAQ {...item} key={getKey()} />

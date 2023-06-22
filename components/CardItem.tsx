@@ -4,7 +4,7 @@ import Image from "next/image";
 function CardItem({ src, title, paragraph }: CardItemPropsType) {
   return (
     <>
-      <div className="max-w-sm p-6 rounded-lg dark:border-gray-700 flex flex-col gap-4">
+      <div className="max-w-sm rounded-lg dark:border-gray-700 flex flex-col gap-4 px-4 py-6">
         <Image
           src={src}
           width={130}

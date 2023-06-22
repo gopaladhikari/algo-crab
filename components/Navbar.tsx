@@ -26,7 +26,7 @@ function Navbar() {
         </Link>
         <div className="flex gap-3 sm:gap-6 items-center md:order-2">
           <Link
-            href={"/login"}
+            href={"/signin"}
             type="button"
             className="dark:text-white hover:text-white transition-colors hover:bg-blue-700  font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0  dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >

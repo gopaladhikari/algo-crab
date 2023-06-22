@@ -12,7 +12,7 @@ import { Pagination, Autoplay } from "swiper";
 
 export default function Testominial() {
   return (
-    <section className="max-w-screen-2xl mx-auto p-4 mt-8">
+    <section className="container mx-auto p-4 mt-8">
       <div>
         <h1 className="text-2xl md:text-3xl xl:text-4xl font-semibold  dark:text-white mb-4 ">
           Review

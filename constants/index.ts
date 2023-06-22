@@ -180,3 +180,18 @@ export const testominialList = [
       "Quotex is really a good platform for trading. The charts are quick in terms of response to market fluctuations and highly customizable. The platform hosts dozens of commonly used indicators that can each be fine-tuned to a trader's personal taste. The deposits and withdrawals are also very fast.",
   },
 ];
+
+export const paymentMethods = [
+  {
+    src: "/visa.svg",
+  },
+  {
+    src: "/mastercard.svg",
+  },
+  {
+    src: "/google-pay.svg",
+  },
+  {
+    src: "/paytm.svg",
+  },
+];
