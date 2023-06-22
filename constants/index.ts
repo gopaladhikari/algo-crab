@@ -195,3 +195,43 @@ export const paymentMethods = [
     src: "/paytm.svg",
   },
 ];
+
+export const pricingList = [
+  {
+    title: "Starter",
+    description: "Best option for personal use & for your next project.",
+    price: 999,
+    features: [
+      "MT4 Bridge",
+      "Monthly Charges",
+      "Free Mt4 Feed",
+      "10 Free Indicator",
+      "8/6 Customer Support",
+    ],
+  },
+  {
+    title: "Standard",
+    description: "Relevant for multiple users, extended & premium support.",
+    price: 1999,
+    features: [
+      "MT4 Bridge",
+      "Monthly Charges",
+      "Free Mt4 Feed",
+      "10 Free Indicator",
+      "8/6 Customer Support",
+    ],
+  },
+  {
+    title: "Premium",
+    description:
+      "Best for large scale uses and extended redistribution rights.",
+    price: 2999,
+    features: [
+      "1 Strategy",
+      "Range 999 to 2999",
+      "Free Performance",
+      "Free Headmap",
+      "8/6 Customer Support",
+    ],
+  },
+];
