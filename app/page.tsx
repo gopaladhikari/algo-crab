@@ -22,7 +22,7 @@ function Home() {
       <section className="container mx-auto sm:pt-16 mb-8">
         <div className="flex justify-between items-center px-6">
           {paymentMethods.map(({ src }) => (
-            <>
+            <div key={getKey()}>
               <Image
                 className="sm:w-[60px] sm:h-[60px] lg:w-[70px] object-contain"
                 src={src}
@@ -30,7 +30,7 @@ function Home() {
                 height={50}
                 alt="payment method"
               />
-            </>
+            </div>
           ))}
         </div>
       </section>

@@ -1,13 +1,14 @@
 "use client";
 import { navLinks } from "@/constants";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavLinkType } from "@/types";
 import { v4 as getKey } from "uuid";
+import Logochanger from "./Logochanger";
 
 function Navbar() {
   const pathname: string = usePathname();
+
   return (
     <nav
       className={
@@ -15,15 +16,7 @@ function Navbar() {
       }
     >
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/logo.png"
-            width={240}
-            height={40}
-            className="mr-3 md:w-[240px] object-contain"
-            alt="Logo"
-          />
-        </Link>
+        <Logochanger />
         <div className="flex gap-3 sm:gap-6 items-center md:order-2">
           <Link
             href={"/signin"}
@@ -61,6 +54,7 @@ function Navbar() {
               />
             </svg>
           </button>
+          L
         </div>
         <div
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"

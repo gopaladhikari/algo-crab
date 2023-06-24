@@ -1,8 +1,8 @@
 import { footerLinks } from "@/constants";
 import Image from "next/image";
-import Link from "next/link";
 import FooterLink from "./FooterLink";
 import { v4 as getKey } from "uuid";
+import Logochanger from "./Logochanger";
 
 function Footer() {
   const thisYear: number = new Date().getFullYear();
@@ -11,15 +11,7 @@ function Footer() {
       <div className="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/logo.png"
-                width={240}
-                height={40}
-                className="mr-3"
-                alt="Logo"
-              />
-            </Link>
+            <Logochanger />
           </div>
 
           <div className="grid grid-cols-2 gap-8 sm:gap-12 sm:grid-cols-3">

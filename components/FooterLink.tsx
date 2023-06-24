@@ -4,7 +4,7 @@ import { ReactElement } from "react";
 
 function FooterLink({ id, title, links }: FooterLinkType): ReactElement {
   return (
-    <div key={id}>
+    <div>
       <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
         {title}
       </h2>
