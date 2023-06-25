@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+
 import Toast from "@/components/Toast";
 
 const inter = Inter({ subsets: ["latin"] });

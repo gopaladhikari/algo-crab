@@ -1,20 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
 function Banner() {
   return (
     <>
-      <section className="banner">
+      <section className="banner lg:h-[70vh]">
         <div className="max-w-screen-xl mx-auto mt-20  flex max-lg:flex-col items-center">
           <Image
+            data-aos="fade-up"
             src="/platform.png"
             width={500}
             height={500}
             className="w-full h-full object-contain"
             alt="banner"
           />
-          <div className="py-8 px-4 lg:py-16 md:mt-16 lg:px-12 w-full">
+          <div
+            data-aos="fade-up"
+            className="py-8 px-4 lg:py-16 md:mt-16 lg:px-12 w-full"
+          >
             <h1 className="mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
               Innovative platform for smart investments
             </h1>

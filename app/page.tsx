@@ -7,22 +7,26 @@ import {
   startTradingSection,
 } from "@/constants";
 import CardItem from "@/components/CardItem";
-import { v4 as getKey } from "uuid";
 import FAQ from "@/components/FAQ";
 import Image from "next/image";
 import Link from "next/link";
 import Testominial from "@/components/Testomonial";
+import Aos from "aos";
+import { useEffect } from "react";
 
 function Home() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <main>
       {/* Hero section */}
       <Banner />
 
-      <section className="container mx-auto sm:pt-16 mb-8">
+      <section data-aos="fade-up" className="container mx-auto sm:pt-16 mb-8">
         <div className="flex justify-between items-center px-6">
-          {paymentMethods.map(({ src }) => (
-            <div key={getKey()}>
+          {paymentMethods.map(({ id, src }) => (
+            <div key={id}>
               <Image
                 className="sm:w-[60px] sm:h-[60px] lg:w-[70px] object-contain"
                 src={src}
@@ -39,7 +43,7 @@ function Home() {
       <section className="py-8 md:py-16 px-4">
         <div className="container mx-auto dark:bg-[#303446] gap-4 grid sm:grid-cols-2 xl:grid-cols-4">
           {dignitySections.map((item) => (
-            <CardItem key={getKey()} {...item} />
+            <CardItem key={item.id} {...item} />
           ))}
         </div>
       </section>
@@ -55,7 +59,7 @@ function Home() {
             Will the price go Up or Down?
           </h2>
           <div className="flex max-md:flex-col p-4 w-full gap-4 max-md:gap-16 md:justify-between">
-            <div className="md:basis-[70%]">
+            <div data-aos="zoom-in" className="md:basis-[70%]">
               <svg
                 id="svgChart"
                 width={989}
@@ -335,7 +339,7 @@ function Home() {
       <section className="py-8 md:py-16 px-4">
         <div className="container mx-auto flex max-md:flex-col gap-4 justify-between">
           {startTradingSection.map((item) => (
-            <CardItem key={getKey()} {...item} />
+            <CardItem key={item.id} {...item} />
           ))}
         </div>
       </section>
@@ -355,7 +359,7 @@ function Home() {
           className="flex flex-col lg:gap-2"
         >
           {FAQList.map((item) => (
-            <FAQ {...item} key={getKey()} />
+            <FAQ {...item} key={item.id} />
           ))}
         </div>
       </section>

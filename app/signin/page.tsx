@@ -50,7 +50,10 @@ function page() {
       },
     });
   return (
-    <section className="bg-gray-50 dark:bg-gray-900  pb-8 pt-32">
+    <section
+      data-aos="zoom-in"
+      className="bg-gray-50 dark:bg-gray-900  pb-8 pt-32"
+    >
       <div className="flex flex-col items-center justify-center px-6 mx-auto lg:py-0">
         <h1 className="dark:text-white text-2xl md:text-3xl text-center my-6">
           Welcome back! Log in to your account.

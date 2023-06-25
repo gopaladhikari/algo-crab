@@ -1,6 +1,5 @@
 "use client";
 import { useFormik } from "formik";
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { signUpFormtype } from "@/types";
@@ -53,7 +52,10 @@ function Signup() {
       },
     });
   return (
-    <section className="bg-gray-50 dark:bg-gray-900 pb-8 pt-32">
+    <section
+      data-aos="zoom-in"
+      className="bg-gray-50 dark:bg-gray-900 pb-8 pt-32"
+    >
       <div className="flex flex-col items-center justify-center px-6 mx-auto lg:py-0">
         <h1 className="dark:text-white text-2xl md:text-3xl my-6">
           Create a free account.

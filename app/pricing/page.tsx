@@ -1,5 +1,4 @@
 import { pricingList } from "@/constants";
-import { v4 as getKey } from "uuid";
 
 function Pricing() {
   return (
@@ -19,9 +18,10 @@ function Pricing() {
           <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
             {/* Pricing Card */}
 
-            {pricingList.map(({ title, description, price, features }) => (
+            {pricingList.map(({ id, title, description, price, features }) => (
               <div
-                key={getKey()}
+                data-aos="flip-up"
+                key={id}
                 className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
               >
                 <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
@@ -37,8 +37,8 @@ function Pricing() {
                 </div>
                 {/* List */}
                 <ul role="list" className="mb-8 space-y-4 text-left">
-                  {features.map((item) => (
-                    <li key={getKey()} className="flex items-center space-x-3">
+                  {features.map(({ id, title }) => (
+                    <li key={id} className="flex items-center space-x-3">
                       {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
@@ -52,7 +52,7 @@ function Pricing() {
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span>{item}</span>
+                      <span>{title}</span>
                     </li>
                   ))}
                 </ul>

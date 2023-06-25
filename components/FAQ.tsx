@@ -3,7 +3,7 @@ import { FaqListPropType } from "@/types";
 
 function FAQ({ id, title, paragraph }: FaqListPropType) {
   return (
-    <div>
+    <div data-aos="fade-up">
       {" "}
       <h2 id={`accordion-color-heading-${id}`}>
         <button

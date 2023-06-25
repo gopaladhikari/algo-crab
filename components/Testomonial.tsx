@@ -2,7 +2,6 @@
 import { testominialList } from "@/constants";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { v4 as getkey } from "uuid";
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,7 +12,7 @@ import { Pagination, Autoplay } from "swiper";
 
 export default function Testominial() {
   return (
-    <section className="container mx-auto p-4 mt-8">
+    <section data-aos="fade-up" className="container mx-auto p-4 mt-8">
       <div>
         <h1 className="text-2xl md:text-3xl xl:text-4xl font-semibold  dark:text-white mb-4 ">
           Review
@@ -35,8 +34,8 @@ export default function Testominial() {
         modules={[Pagination, Autoplay]}
         className="mySwiper"
       >
-        {testominialList.map(({ userName, description }) => (
-          <div key={getkey()}>
+        {testominialList.map(({ id, userName, description }) => (
+          <div key={id}>
             <SwiperSlide>
               <section className="bg-white dark:bg-gray-900">
                 <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">

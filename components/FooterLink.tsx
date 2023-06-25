@@ -9,17 +9,13 @@ function FooterLink({ id, title, links }: FooterLinkType): ReactElement {
         {title}
       </h2>
       <ul className="text-gray-600 dark:text-gray-400 font-medium">
-        {links?.map(({ id, href, title }) => {
-          if (typeof href === "string") {
-            return (
-              <li key={id} className="mb-4">
-                <Link href={href} className="hover:underline">
-                  {title}
-                </Link>
-              </li>
-            );
-          }
-        })}
+        {links!.map(({ id, href, title }) => (
+          <li key={id} className="mb-4">
+            <Link href={href} className="hover:underline">
+              {title}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );

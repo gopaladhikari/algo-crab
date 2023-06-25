@@ -12,11 +12,12 @@
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
+    "aos": "^2.3.4",
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
     "formik": "^2.4.2",
     "framer-motion": "^10.12.16",
-    "next": "13.4.6",
+    "next": "^13.4.8-canary.2",
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -30,6 +31,7 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "@types/uuid": "^9.0.2"
   }
 }
