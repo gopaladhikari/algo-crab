@@ -16,9 +16,9 @@ function Navbar() {
         "bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
       }
     >
-      <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-2xl flex max-sm:flex-col max-sm:gap-3 flex-wrap items-center justify-between mx-auto p-4">
         <Logochanger />
-        <div className="flex gap-3 sm:gap-6 items-center md:order-2">
+        <div className="flex gap-4 sm:gap-6 items-center md:order-2">
           <Link
             href={"/signin"}
             type="button"

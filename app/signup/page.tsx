@@ -6,6 +6,7 @@ import { signUpFormtype } from "@/types";
 import { signUpValidator } from "@/schemas/signupValidation";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Aos from "aos";
 const url = "https://jsonplaceholder.typicode.com/posts";
 
 const initialValues: signUpFormtype = {
@@ -17,6 +18,9 @@ const initialValues: signUpFormtype = {
 };
 
 function Signup() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   const { errors, values, touched, handleBlur, handleSubmit, handleChange } =
     useFormik({
       initialValues,

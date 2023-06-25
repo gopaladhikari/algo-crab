@@ -29,7 +29,7 @@ function Logochanger() {
   return (
     <>
       {darkTheme ? (
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex justify-center items-center">
           <Image
             src="/logo-dark.png"
             width={240}
@@ -39,7 +39,7 @@ function Logochanger() {
           />
         </Link>
       ) : (
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex justify-center items-center">
           <Image
             src="/logo.png"
             width={240}

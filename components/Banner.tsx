@@ -5,7 +5,7 @@ function Banner() {
   return (
     <>
       <section className="banner lg:h-[70vh]">
-        <div className="max-w-screen-xl mx-auto mt-20  flex max-lg:flex-col items-center">
+        <div className="max-w-screen-xl mx-auto mt-28  sm:mt-20 flex max-lg:flex-col items-center">
           <Image
             data-aos="fade-up"
             src="/platform.png"

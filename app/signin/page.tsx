@@ -1,11 +1,12 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 import { loginFormtype } from "@/types";
 import { loginValidator } from "@/schemas/loginValiation";
 import { toast } from "react-toastify";
+import Aos from "aos";
 const url = "https://jsonplaceholder.typicode.com/posts";
 
 const initialValues: loginFormtype = {
@@ -15,6 +16,9 @@ const initialValues: loginFormtype = {
 };
 
 function page() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   const { handleBlur, handleChange, values, touched, errors, handleSubmit } =
     useFormik({
       initialValues,
